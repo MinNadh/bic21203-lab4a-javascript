@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number List</title>
+</head>
+<body>
+  <h1>Number List</h1>
+  <button id="generateBtn" type="button">Generate List</button>
+  <ol id="numberList"></ol>
+
+  <script>
+    const generateBtn = document.getElementById("generateBtn");
+    const numberList = document.getElementById("numberList");
+
+    function generateList() {
+      numberList.replaceChildren();
+
+      for (let number = 1; number <= 5; number++) {
+        const item = document.createElement("li");
+        item.textContent = `The number is ${number}`;
+        numberList.appendChild(item);
+      }
+    }
+
+    generateBtn.addEventListener("click", generateList);
+  </script>
+</body>
+</html>

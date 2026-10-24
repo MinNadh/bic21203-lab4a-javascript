@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>Execute a function when a user clicks on a button:</p>
+
+<button id="changeBtn">Change Message</button>
+
+<p id="message">
+
+<script>
+const element = document.getElementById("changeBtn");
+element.addEventListener("click", changeMessage);
+
+function changeMessage() {
+  document.getElementById("message").innerHTML = "Hello there!";
+}
+</script>
+
+</body>
+</html>
